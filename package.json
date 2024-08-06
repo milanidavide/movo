@@ -1,0 +1,17 @@
+{
+    "name": "movo-project",
+    "version": "0.0.0",
+    "private": true,
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ],
+    "scripts": {
+        "test": "npm run test -w movo",
+        "dev": "concurrently \"npm run dev -w movo\" \"npm run dev -w playground\"",
+        "build": "concurrently \"npm run build -w movo\" \"npm run build -w playground\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}

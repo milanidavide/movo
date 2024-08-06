@@ -1,0 +1,29 @@
+{
+    "name": "movo",
+    "description": "A tiny JavaScript library for effortless scroll-based CSS animations",
+    "version": "0.1.0",
+    "license": "BSD-3-Clause",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/movo.cjs",
+    "module": "./dist/movo.js",
+    "exports": {
+        ".": {
+            "import": "./dist/movo.js",
+            "require": "./dist/movo.cjs"
+        },
+        "./css": "./dist/movo.css"
+    },
+    "scripts": {
+        "test": "vitest run",
+        "dev": "vite build --watch",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "sass": "^1.77.8",
+        "vite": "^5.3.5",
+        "vitest": "^2.0.5"
+    }
+}

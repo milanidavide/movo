@@ -1,0 +1,12 @@
+{
+  "name": "playground",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "movo": "*",
+    "vite": "^5.3.5"
+  }
+}

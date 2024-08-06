@@ -1,0 +1,12 @@
+:root {
+    --movo-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+    --movo-transition-duration: 400ms;
+    --movo-transition-delay: 0ms;
+    --movo-translate-offset: 20%;
+}
+
+[data-movo] {
+    transition-duration: var(--movo-transition-duration);
+    transition-delay: var(--movo-transition-delay);
+    transition-timing-function: var(--movo-timing-function);
+}

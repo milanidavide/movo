@@ -1,0 +1,94 @@
+// ===========================================
+// Fade Animations
+// ===========================================
+[data-movo="fade-in"] {
+    opacity: 0;
+    transition-property: opacity;
+
+    &.movo-animate {
+        opacity: 1;
+    }
+}
+
+[data-movo="fade-in-down"] {
+    opacity: 0;
+    transform: translateY(calc(-1 * var(--movo-translate-offset)));
+    transition-property: opacity, transform;
+
+    &.movo-animate {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+[data-movo="fade-in-right"] {
+    opacity: 0;
+    transform: translateX(var(--movo-translate-offset));
+    transition-property: opacity, transform;
+
+    &.movo-animate {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+[data-movo="fade-in-up"] {
+    opacity: 0;
+    transform: translateY(var(--movo-translate-offset));
+    transition-property: opacity, transform;
+
+    &.movo-animate {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+[data-movo="fade-in-left"] {
+    opacity: 0;
+    transform: translateX(calc(-1 * var(--movo-translate-offset)));
+    transition-property: opacity, transform;
+
+    &.movo-animate {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+// ===========================================
+// Image Reveal
+// ===========================================
+[data-movo="image-reveal-down"] {
+    clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
+    transition-property: clip-path;
+
+    &.movo-animate {
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+}
+
+[data-movo="image-reveal-right"] {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition-property: clip-path;
+
+    &.movo-animate {
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+}
+
+[data-movo="image-reveal-up"] {
+    clip-path: polygon(100% 100%, 0 100%, 0 100%, 100% 100%);
+    transition-property: clip-path;
+
+    &.movo-animate {
+        clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
+    }
+}
+
+[data-movo="image-reveal-left"] {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition-property: clip-path;
+
+    &.movo-animate {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
