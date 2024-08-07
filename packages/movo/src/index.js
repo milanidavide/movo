@@ -10,9 +10,9 @@ export const Movo = {
 /**
  * Create a Movo instance.
  *
- * @param {Object} [globalOptions={}] - The options to use.
- * @param {string} [globalOptions.offset="top, bottom"] - The offset for the trigger point.
- * @param {boolean} [globalOptions.repeat=true] - Whether the animation should repeat.
+ * @param {Object} [options={}] - The options to use.
+ * @param {string} [options.offset="top, bottom"] - The offset for the trigger point.
+ * @param {boolean} [options.repeat=true] - Whether the animation should repeat.
  * @return {Object} - The Movo instance.
  */
 function create(options = {}) {
@@ -64,12 +64,12 @@ function create(options = {}) {
     return instance;
 };
 
+
 /**
  * Prepare the list of elements based on the provided options and data attributes.
  *
- * @param {HTMLElement[]} elements - The list of elements to prepare.
  * @param {Object} options - The options to use.
- * @return {Object[]} The prepared list of elements with their respective data.
+ * @return {Array<Object>} The prepared list of elements with their respective data.
  */
 function prepareElements(options) {
     return Array
@@ -112,7 +112,7 @@ function updateElementsVisibility(elements) {
  * Calculate the trigger point for an element.
  *
  * @param {HTMLElement} element - The element for which to calculate the trigger point.
- * @param {Array<string>} offset - The offset values for the target and viewport.
+ * @param {string} offset - The offset values for the target and viewport as a comma-separated string.
  * @return {number} The trigger point.
  */
 function calculateTriggerPoint(element, offset) {
@@ -138,10 +138,10 @@ function getOffsetTop(element) {
 
 /**
  * Parse an offset value and return its equivalent in pixels.
- * 
- * @param {number} size The base size in pixels.
- * @param {string} offsetValue The offset value to parse (e.g., "10px", "20%", "30% + 10px").
- * @returns {number|null} The parsed offset value in pixels, or null if the format is unsupported.
+ *
+ * @param {number} size - The base size in pixels.
+ * @param {string} offsetValue - The offset value to parse (e.g., "10px", "20%", "30% + 10px").
+ * @return {number|null} The parsed offset value in pixels, or null if the format is unsupported.
  */
 export function parseOffset(size, offsetValue) {
     offsetValue = offsetValue
