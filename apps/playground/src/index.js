@@ -1,4 +1,4 @@
-import { Movo } from "movo";
-import "movo/css";
+import { Movo } from "movo-web";
+import "movo-web/css";
 
 Movo.create({ repeat: true });
