@@ -1,7 +1,7 @@
 {
     "name": "movo-web",
     "description": "A tiny JavaScript library for effortless scroll-based CSS animations",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "license": "BSD-3-Clause",
     "repository": {
         "type": "git",
@@ -13,6 +13,7 @@
     ],
     "main": "./dist/movo.cjs",
     "module": "./dist/movo.js",
+    "style": "./dist/movo.css",
     "exports": {
         ".": {
             "import": "./dist/movo.js",
