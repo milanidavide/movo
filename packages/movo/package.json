@@ -3,6 +3,11 @@
     "description": "A tiny JavaScript library for effortless scroll-based CSS animations",
     "version": "0.1.0",
     "license": "BSD-3-Clause",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/milanidavide/movo.git",
+        "directory": "packages/movo"
+    },
     "type": "module",
     "files": [
         "dist"
