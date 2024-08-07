@@ -55,7 +55,7 @@ Refreshes the Movo instance, recalculating offsets. Useful if the content or lay
 
 **`movoInstance.reset()`**
 
-Resets the Movo instance by re-querying the DOM elements.
+Resets the Movo instance by re-querying the DOM elements and resetting their states.
 
 **`movoInstance.destroy()`**
 
@@ -113,7 +113,7 @@ You can adjust the default animations by overriding the following CSS variables:
 
 #### Extending with Custom Animations
 
-You can also extend Movo with your own custom animations. Here's an example of how to add a "slide-in" animation:
+You can also extend Movo with your own custom animations. Here's an example of how to add a "slide-in-up" animation:
 
 ```css
 [data-movo="slide-in-up"] {
