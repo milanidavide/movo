@@ -7,9 +7,9 @@
         "apps/*"
     ],
     "scripts": {
-        "test": "npm run test -w movo",
-        "dev": "concurrently \"npm run dev -w movo\" \"npm run dev -w playground\"",
-        "build": "concurrently \"npm run build -w movo\" \"npm run build -w playground\""
+        "test": "npm run test -w movo-web",
+        "dev": "concurrently \"npm run dev -w movo-web\" \"npm run dev -w playground\"",
+        "build": "concurrently \"npm run build -w movo-web\" \"npm run build -w playground\""
     },
     "devDependencies": {
         "concurrently": "^8.2.2"
