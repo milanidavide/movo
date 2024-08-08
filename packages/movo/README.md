@@ -81,6 +81,7 @@ You can customize Movo's behavior using HTML data attributes, which will overrid
 
 -   `data-movo-offset`: Set a custom offset for when the animation should trigger (e.g., `"start + 10%, bottom - 50px"`).
 -   `data-movo-repeat`: Enable or disable animation repetition by setting to `"true"` or `"false"`.
+-   `data-movo-trigger`: Specify a different DOM element as the animation trigger by using a CSS selector, instead of the animation element itself. For example `data-movo-trigger="#trigger-element"`.
 
 ### CSS Customization
 

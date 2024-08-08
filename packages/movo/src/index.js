@@ -32,7 +32,7 @@ function create(options = {}) {
 
     const refresh = () => {
         elements.forEach(element => {
-            element.triggerPoint = calculateTriggerPoint(element.target, element.offset)
+            element.triggerPoint = calculateTriggerPoint(element.triggerElement, element.offset)
         });
         handleElementsVisibility();
     };
@@ -83,10 +83,14 @@ function prepareElements(options) {
                 ? element.getAttribute('data-movo-repeat') === 'true'
                 : options.repeat;
 
+            const triggerSelector = element.getAttribute('data-movo-trigger');
+            const triggerElement = triggerSelector ? document.querySelector(triggerSelector) || element : element;
+
             return {
                 target: element,
                 offset: offset,
-                triggerPoint: calculateTriggerPoint(element, offset),
+                triggerElement: triggerElement,
+                triggerPoint: calculateTriggerPoint(triggerElement, offset),
                 repeat,
             };
         });
