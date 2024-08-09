@@ -1,3 +1,5 @@
+import "./styles/index.scss";
+
 const instances = new Set();
 
 export const Movo = {
