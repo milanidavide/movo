@@ -9,80 +9,118 @@
 </head>
 
 <body>
-    <div class="intro">
-        <h1 class="intro__title">Movo</h1>
-    </div>
-
-    <div class="section">
-        <div class="section__container">
-            <div class="section__cell">
-                <div class="content" data-movo="fade-in">
-                    <p class="content__text">Fade In</p>
-                </div>
-            </div>
-
-            <div class="section__cell">
-                <div class="content" data-movo="fade-in-down">
-                    <p class="content__text">Fade In Down</p>
-                </div>
-            </div>
-
-            <div class="section__cell">
-                <div class="content" data-movo="fade-in-right">
-                    <p class="content__text">Fade In Right</p>
-                </div>
-            </div>
-
-            <div class="section__cell">
-                <div class="content" data-movo="fade-in-up">
-                    <p class="content__text">Fade In Up</p>
-                </div>
-            </div>
-
-            <div class="section__cell">
-                <div class="content" data-movo="fade-in-left">
-                    <p class="content__text">Fade In Left</p>
-                </div>
-            </div>
-
-            <div class="section__cell">
-                <div class="content content--vertical">
-                    <img class="content__image" src="assets/images/image.jpg" data-movo="image-reveal-down">
-                    <p class="content__text">Image Reveal Down</p>
-                </div>
-            </div>
-
-            <div class="section__cell">
-                <div class="content content--vertical">
-                    <img class="content__image" src="assets/images/image.jpg" data-movo="image-reveal-right">
-                    <p class="content__text">Image Reveal Right</p>
-                </div>
-            </div>
-
-            <div class="section__cell">
-                <div class="content content--vertical">
-                    <img class="content__image" src="assets/images/image.jpg" data-movo="image-reveal-up"
-                        data-movo-trigger="#trigger-element">
-                    <p class="content__text">Image Reveal Up</p>
-                </div>
-            </div>
-
-            <div class="section__cell">
-                <div class="content content--vertical">
-                    <img class="content__image" src="assets/images/image.jpg" data-movo="image-reveal-left"
-                        id="trigger-element">
-                    <p class="content__text">Image Reveal Left</p>
-                </div>
-            </div>
-
+    <main id="app">
+        <div class="intro">
+            <h1 class="intro__title">Movo</h1>
         </div>
-    </div>
 
-    <div class="footer">
-        <p class="footer__text">
-            <a class="footer__link" href="https://github.com/milanidavide/movo" target="_blank">GitHub</a>
-        </p>
-    </div>
+        <div class="section">
+            <div class="section__container container">
+                <div class="section__cell">
+                    <div class="content" data-movo="fade-in">
+                        <p class="content__text">Fade In</p>
+                    </div>
+                </div>
+
+                <div class="section__cell">
+                    <div class="content" data-movo="fade-in-down">
+                        <p class="content__text">Fade In Down</p>
+                    </div>
+                </div>
+
+                <div class="section__cell">
+                    <div class="content" data-movo="fade-in-right">
+                        <p class="content__text">Fade In Right</p>
+                    </div>
+                </div>
+
+                <div class="section__cell">
+                    <div class="content" data-movo="fade-in-up">
+                        <p class="content__text">Fade In Up</p>
+                    </div>
+                </div>
+
+                <div class="section__cell">
+                    <div class="content" data-movo="fade-in-left">
+                        <p class="content__text">Fade In Left</p>
+                    </div>
+                </div>
+
+                <div class="section__cell">
+                    <div class="content content--vertical">
+                        <img class="content__image" src="assets/images/image.jpg" data-movo="image-reveal-down">
+                        <p class="content__text">Image Reveal Down</p>
+                    </div>
+                </div>
+
+                <div class="section__cell">
+                    <div class="content content--vertical">
+                        <img class="content__image" src="assets/images/image.jpg" data-movo="image-reveal-right">
+                        <p class="content__text">Image Reveal Right</p>
+                    </div>
+                </div>
+
+                <div class="section__cell">
+                    <div class="content content--vertical">
+                        <img class="content__image" src="assets/images/image.jpg" data-movo="image-reveal-up"
+                            data-movo-trigger="#trigger-element">
+                        <p class="content__text">Image Reveal Up</p>
+                    </div>
+                </div>
+
+                <div class="section__cell">
+                    <div class="content content--vertical">
+                        <img class="content__image" src="assets/images/image.jpg" data-movo="image-reveal-left"
+                            id="trigger-element">
+                        <p class="content__text">Image Reveal Left</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="staggers" data-counter-target=".staggers__cell">
+            <div class="staggers__container container">
+                <div class="staggers__wrapper">
+                    <div class="staggers__cell" data-movo="fade-in"></div>
+                    <div class="staggers__cell" data-movo="fade-in"></div>
+                    <div class="staggers__cell" data-movo="fade-in"></div>
+                    <div class="staggers__cell" data-movo="fade-in"></div>
+                    <div class="staggers__cell" data-movo="fade-in"></div>
+                    <div class="staggers__cell" data-movo="fade-in"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal-title" data-counter-target=".reveal-title__word">
+            <div class="reveal-title__container container">
+                <h3 class="reveal-title__title" id="reveal-title">
+                    <span class="reveal-title__word-wrapper">
+                        <span class="reveal-title__word" data-movo="fade-in-up" data-movo-offset="center, 80%"
+                            data-movo-trigger="#reveal-title">Unbelievably</span>
+                    </span>
+                    <span class="reveal-title__word-wrapper">
+                        <span class="reveal-title__word" data-movo="fade-in-up" data-movo-offset="center, 80%"
+                            data-movo-trigger="#reveal-title">thin.</span>
+                    </span>
+                    <span class="reveal-title__word-wrapper">
+                        <span class="reveal-title__word" data-movo="fade-in-up" data-movo-offset="center, 80%"
+                            data-movo-trigger="#reveal-title">Incredibly</span>
+                    </span>
+                    <span class="reveal-title__word-wrapper">
+                        <span class="reveal-title__word" data-movo="fade-in-up" data-movo-offset="center, 80%"
+                            data-movo-trigger="#reveal-title">powerful.</span>
+                    </span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="footer__text">
+                <a class="footer__link" href="https://github.com/milanidavide/movo" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </main>
 
     <script type="module" src="src/index.js"></script>
 </body>

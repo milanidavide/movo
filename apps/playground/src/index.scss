@@ -3,6 +3,11 @@ body {
     font-family: "system-ui", sans-serif;
 }
 
+#app {
+    position: relative;
+    overflow-x: hidden;
+}
+
 .intro {
     min-height: 100svh;
     display: grid;
@@ -16,7 +21,7 @@ body {
     font-weight: 400;
 }
 
-.section__container {
+.container {
     padding: 0 30px;
     box-sizing: border-box;
     width: 100%;
@@ -70,6 +75,64 @@ body {
     font-size: 18px;
     position: relative;
     z-index: 1;
+}
+
+.staggers {
+    margin-top: 80px;
+}
+
+.staggers__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.staggers__cell {
+    aspect-ratio: 2 / 1;
+    background-color: #eee;
+}
+
+@media (min-width: 600px) {
+    .staggers__wrapper {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .staggers__cell {
+        --counter: var(--item-count-reverse);
+        --movo-transition-delay: calc(var(--counter, 1) * 50ms);
+        aspect-ratio: 1 / 1;
+    }
+
+    .staggers__cell.movo-animate {
+        --counter: var(--item-count);
+    }
+}
+
+.reveal-title {
+    margin-top: 80px;
+}
+
+.reveal-title__title {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.08;
+}
+
+.reveal-title__word-wrapper {
+    clip-path: inset(0);
+}
+
+.reveal-title__word {
+    --counter: var(--item-count-reverse);
+    --movo-timing-function: cubic-bezier(0.64, 0, 0.78, 0);
+    --movo-translate-offset: 100%;
+    --movo-transition-duration: 600ms;
+    --movo-transition-delay: calc(var(--counter, 1) * 50ms);
+    display: inline-block;
+
+    &.movo-animate {
+        --movo-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+        --counter: var(--item-count);
+    }
 }
 
 .footer {
