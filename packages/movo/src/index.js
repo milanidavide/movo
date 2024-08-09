@@ -20,7 +20,7 @@ export const Movo = {
 function create(options = {}) {
     options = Object.assign({
         selector: '[data-movo]',
-        offset: "top, bottom - 120px",
+        offset: "top, bottom - 140px",
         repeat: false,
     }, options);
 
